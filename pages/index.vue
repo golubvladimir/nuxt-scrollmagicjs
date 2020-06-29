@@ -28,7 +28,6 @@ export default {
       triggerElement: this.$refs.pageContainer,
       triggerHook: 1,
       duration: containerSizes.height,
-      offset: 100
     })
       .on('progress', e => {
 
