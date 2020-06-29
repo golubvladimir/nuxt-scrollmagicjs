@@ -50,7 +50,10 @@ export default {
     &__element {
       width: 150px;
       height: 100px;
-      background: #ff0000;
+      background-color: #000000;
+      background-image: url("~static/businessman.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
       position: absolute;
       top: 0;
       left: 50%;
