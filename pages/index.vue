@@ -15,18 +15,20 @@
 <script>
 export default {
   mounted() {
+    const containerSizes = this.$refs.pageContainer.getBoundingClientRect();
+
     const controller = new this.$scrollmagic.Controller();
 
     const scene1 = new this.$scrollmagic.Scene({
       triggerElement: this.$refs.pageContainer,
       triggerHook: 1,
-      duration: window.innerHeight - 100,
+      duration: containerSizes.height - 100,
       offset: 100
     })
       .on('progress', e => {
         console.log(e.progress);
 
-        this.$refs.pageElement.style.top = `${ e.progress * (window.innerHeight - 100) }px`;
+        this.$refs.pageElement.style.top = `${ e.progress * ( containerSizes.height - 100 ) }px`;
       });
 
     controller.addScene([scene1]);
